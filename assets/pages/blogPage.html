@@ -1,0 +1,46 @@
+<style>
+	.panel{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.col-md-5{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.row{
+		padding-left: 10px;
+		padding-right: 0px;
+	}
+</style>
+<div class="container"> 
+	<div class="row" ng-repeat="blog in blogs">
+		<h3 class="text-center" style="color:blue;">{{blog.topic}}</h3>
+		<div class="panel panel-info col-md-offset-2 col-md-8">		
+			<div class="panel-body" ng-click="ShowComments(blog)">
+				<h4>{{blog.comment}}</h4>
+			</div>
+			<div class="panel-footer text-right" ng-click="ShowComments(blog)">
+				Created by <span style="color:blue;">{{blog.author}}</span>
+			</div>
+		</div>
+		<div class="row">
+			<form class="form-horizontal col-md-offset-4 col-md-6 " ng-repeat="comm in comments">
+				<h4 class="text-right">{{comm.author}}</h4>
+				<h5 class="text-right">{{comm.blogComment}}</h5>
+				<hr>
+			</form>
+		</div>
+		<div class="row col-md-offset-9 col-md-1" ng-show="showButton" ng-click="Change()">
+			<button class="btn btn-default btn-xs">Add comment</button>
+		</div>
+		<div class="col-md-offset-5 col-md-5" ng-show="hideAdd">
+			<textarea class="form-control" rows="2" placeholder="Your Comment" ng-model="newComment.comm"></textarea>
+		</div>
+		<div class="row col-md-offset-9 col-md-1 text-right" ng-show="hideAdd" ng-click="AddComment()" style="margin-top:10px;">
+			<button class="btn btn-default btn-xs">Send</button>
+		</div>
+		<div class="row col-md-offset-2 col-md-8 text-right" ng-show="showError">
+			<h4 style="color:red;"><strong>Please Log In or Sign Up</strong></h4>
+		</div>
+	</div>
+</div>

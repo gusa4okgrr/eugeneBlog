@@ -1,0 +1,17 @@
+<div class="container col-md-offset-4 col-md-4">
+	<div class="row">
+		<h2 class="text-center">Please log in or sign up</h2>
+	</div>
+	<div class="row" style="margin-top:10px;">
+		<input class="form-control" required ng-model="login" placeholder="E-mail">
+	</div>
+	<div class="row" style="margin-top:20px;">
+		<input class="form-control" required ng-model="pass" placeholder="Password">
+	</div>
+	<div class="row col-md-offset-10 col-md-1">
+		<button class="btn btn-default" style="margin-top:20px;" ng-click="Authentificate()">Confirm</button>
+	</div>
+	<div class="row" ng-hide="Err" style="margin-top: 50px;">
+		<h2 class="text-center" style="color: red;">Email or password are incorrect!</h2>
+	</div>
+</div>

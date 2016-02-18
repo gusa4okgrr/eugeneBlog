@@ -1,0 +1,52 @@
+<style >
+	.row{
+		padding-left: 10px;
+	}
+</style>
+<div class="container col-md-offset-4  col-md-4" style="margin-top:20px;">
+	<div class="row">
+		<input class="form-control" rows="1" required ng-model="name" placeholder="Name">
+	</div>
+	<div class="row" style="margin-top:10px;" ng-show="ErrName">
+		<span style="color:red;">Please, enter name</span>
+	</div>
+	<div class="row" style="margin-top:10px;">
+		<input class="form-control" rows="1" required ng-model="surname" placeholder="Surname">
+	</div>
+	<div class="row" style="margin-top:10px;" ng-show="ErrSurname">
+		<span style="color:red;">Please, enter surname</span>
+	</div>
+	<div class="row" style="margin-top:10px;">
+		<input class="form-control" rows="1" required ng-model="number" placeholder="Telephone number">
+	</div>
+	<div class="row" style="margin-top:10px;" ng-show="ErrNumber">
+		<span style="color:red;">Please, enter telephone number</span>
+	</div>
+	<div class="row" style="margin-top:10px;">
+		<input class="form-control" rows="1" required ng-model="age" placeholder="Age">
+	</div>
+	<div class="row" style="margin-top:10px;" ng-show="ErrAge">
+		<span style="color:red;">Please, enter age</span>
+	</div>
+	<div class="row" style="margin-top:10px;">
+		<input class="form-control" rows="1" required ng-model="country" placeholder="Country">
+	</div>
+	<div class="row" style="margin-top:10px;" ng-show="ErrCountry">
+		<span style="color:red;">Please, enter country</span>
+	</div>
+	<div class="row" style="margin-top:10px;">		
+		<input class="form-control" rows="1" required ng-model="login" placeholder="E-mail">
+	</div>
+	<div class="row" style="margin-top:10px;" ng-show="ErrEmail">
+		<span style="color:red;">Please, enter e-mail</span>
+	</div>
+	<div class="row" style="margin-top:10px;">		
+		<input class="form-control" rows="1" required ng-model="pass" placeholder="Password">
+	</div>
+	<div class="row" style="margin-top:10px;" ng-show="ErrPassword">
+		<span style="color:red;">Please, enter password</span>
+	</div>
+	<div class="row col-md-offset-10" style="margin-top:10px;">		
+		<button class="btn btn-pimary" ng-click="Registrate()">Confirm</button>
+	</div>
+</div>

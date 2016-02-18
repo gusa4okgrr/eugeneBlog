@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="row text-center">
+		<h1 style="text-align: center;">{{Name}}, Welcome to Eugene`s Blog</h1>
+	</div>
+	<div class="col-md-6">
+			<div class="row text-center">
+				<h2>Your blog posts</h2>
+			</div>
+			<div class="row" ng-repeat="comm in comments" ng-show="full">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 style="color:blue;">{{comm.topic}}</h3>
+					</div>
+					<div class="panel-body">
+						<h4>{{comm.comment}}</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h2 style="color: red;" ng-show="empty">You haven`t comments yet</h2>
+			</div>
+			<div class="row">
+				<h2 style="color: red;" ng-show="empty"> So create them!</h2>
+			</div>
+	</div>
+	<div class="row col-md-offset-1 col-md-5" style="margin-top: 25px;">
+		<div class="row text-center" >
+			<button class="btn btn-primary btn-lg" ng-click="createComment()">Create New Comment</button>
+		</div>
+		<div class="row" ng-show="createComm">
+			<div class="row text-center">
+				<h3>Topic: </h3>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<input class="form-control" ng-model="newTopic">
+				</div>
+			</div>
+			<div class="row text-center" style="margin-bottom:0px;">
+				<h3>Comment: </h3>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<textarea class="form-control" rows="3" placeholder="Your Comment" ng-model="newComment"></textarea>
+				</div>
+			</div>
+			<div class="row col-md-offset-10 col-md-2" style="margin-top:20px;">
+					<button class="btn btn-default" ng-click="addComment()">Create</button>	
+			</div>
+		</div>
+	</div>
+</div>
